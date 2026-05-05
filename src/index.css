@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0f172a] text-slate-300 font-sans antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-slate-800/50 backdrop-blur-sm border border-slate-700 shadow-sm transition-all;
+  }
+
+  .text-gradient {
+    @apply text-white font-semibold;
+    /* Removed gradient completely for a neat look */
+  }
+
+  .neon-border {
+    @apply hover:border-slate-500 transition-colors duration-300;
+    /* Removed glowing borders */
+  }
+}
+
+/* Smooth Scrolling is handled by Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
