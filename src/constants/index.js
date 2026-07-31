@@ -17,7 +17,7 @@ export const PORTFOLIO_DATA = {
       institution: "Kongu Engineering College",
       degree: "B.E Computer Science and Design",
       score: "CGPA: 8.41 (till Sixth semester)",
-      year: "2025",
+      year: "2023",
     },
     {
       institution: "Srinivasa Vidhyalaya Matric Hr. Sec School",
