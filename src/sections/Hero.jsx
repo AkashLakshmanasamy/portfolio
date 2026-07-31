@@ -37,16 +37,11 @@ const Hero = () => {
                         className="text-xl md:text-2xl text-slate-400 h-[40px] font-medium mt-4"
                     >
                         <TypeAnimation
-                            sequence={[
-                                PORTFOLIO_DATA.roles[0], 2000,
-                                PORTFOLIO_DATA.roles[1], 2000,
-                                PORTFOLIO_DATA.roles[2], 2000,
-                                PORTFOLIO_DATA.roles[3], 2000,
-                            ]}
+                            sequence={PORTFOLIO_DATA.roles.flatMap(role => [role, 2000])}
                             wrapper="span"
                             speed={50}
                             repeat={Infinity}
-                            className="text-primary"
+                            className="text-primary font-outfit"
                         />
                     </motion.div>
 

@@ -1,6 +1,7 @@
 import { PORTFOLIO_DATA } from '../constants';
 import { motion } from 'framer-motion';
 import { FiCode, FiDatabase } from 'react-icons/fi';
+import profileImg from '../assets/profile.png';
 
 const About = () => {
     return (
@@ -19,10 +20,17 @@ const About = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="relative"
+                        className="relative group"
                     >
-                        <div className="relative w-full max-w-sm mx-auto aspect-square bg-slate-800 rounded-2xl border border-slate-700 flex items-center justify-center overflow-hidden">
-                            <span className="text-4xl text-slate-600 font-bold tracking-widest opacity-30">A K A S H</span>
+                        <div className="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition duration-700"></div>
+                        <div className="relative w-full max-w-sm mx-auto aspect-[3/4] bg-slate-800 rounded-2xl border border-slate-700 flex items-center justify-center overflow-hidden shadow-2xl">
+                            <img
+                                src={profileImg}
+                                alt="Akash L"
+                                className="w-full h-full object-cover object-[center_20%] transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                                loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
                     </motion.div>
 
